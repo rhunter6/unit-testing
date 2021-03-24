@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClickCounter testing should click the counter 1`] = `
+<div>
+  Click Count: 
+  25
+  <br />
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Click Me!
+  </button>
+</div>
+`;
+
+exports[`ClickCounter testing should render 1`] = `
+<div>
+  Click Count: 
+  0
+  <br />
+  <br />
+  <button
+    onClick={[Function]}
+  >
+    Click Me!
+  </button>
+</div>
+`;
