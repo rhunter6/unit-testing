@@ -8,19 +8,23 @@ test('renders learn react link', () => {
   // screen.debug();
 
   // I generally use getByText().
-  // const linkElement = screen.getByText(/click count/i);
-  // expect(linkElement).toBeInTheDocument();
+  // const counter = screen.getByText(/click count/i);
+  // expect(counter).toBeInTheDocument();
 
   // But the docs say you should first use getByRole().
   // To get a list of suggested roles to query by:
   // screen.getByRole('');
 
-  // It can't find header, but it is in the document.
+  // So you can use this test.
+  // expect(screen.getByRole('button')).toBeInTheDocument();
+
+  // But not all elements have the same name for their role.
+  // RTL can't find header, but it is in the document.
   // You have to use the roles as defined in 
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
   // expect(screen.getByRole('header')).toBeInTheDocument();
 
-  // You have to use the role of banner.
+  // To have the test work, you have to use the role of banner.
   // expect(screen.getByRole('banner')).toBeInTheDocument();
 
 });
