@@ -1,7 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
-test('renders learn react link', () => {
+import App from "./App";
+
+test("renders learn react link", () => {
   render(<App />);
 
   // To see the DOM that React Testing Library looks at:
@@ -20,11 +22,23 @@ test('renders learn react link', () => {
 
   // But not all elements have the same name for their role.
   // RTL can't find header, but it is in the document.
-  // You have to use the roles as defined in 
+  // You have to use the roles as defined in
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
   // expect(screen.getByRole('header')).toBeInTheDocument();
 
   // To have the test work, you have to use the role of banner.
   // expect(screen.getByRole('banner')).toBeInTheDocument();
+});
 
+describe("App testing the click counter", () => {
+  it("should test tab focus", () => {
+    render(<App />);
+    const [basicButton, fancyButton] = screen.getAllByRole("button");
+
+    expect(document.body).toHaveFocus();
+    userEvent.tab();
+    expect(basicButton).toHaveFocus();
+    userEvent.tab();
+    expect(fancyButton).toHaveFocus();
+  });
 });

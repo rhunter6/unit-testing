@@ -6,3 +6,5 @@ ClickCounter-enzyme.test.js - Uses React Testing Library.  You can compare the t
 
 App.test.js - Showing testing using React Testing Library.
 
+FancyButton.test.js Showing user-event testing and mocking callbacks.
+
