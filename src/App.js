@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import ClickCounter from './ClickCounter/ClickCounter';
 import FancyButton from "./FancyButton/FancyButton";
+import { GetData } from './GetData/GetData';
 
 function App() {
   const [fancyCount, setFancyCount] = useState(0);
@@ -18,7 +19,11 @@ function App() {
       <br />
       <FancyButton onClick={() => setFancyCount(fancyCount + 1)} >Fancy Button</FancyButton>
       <div>The Fancy Button Counter: {fancyCount}</div>
+      <br />
+      <h2>Get Data Example</h2>
+      <GetData />
     </div>
+    
   );
 }
 
