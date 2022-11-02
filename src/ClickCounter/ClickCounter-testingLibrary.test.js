@@ -22,9 +22,9 @@ describe("ClickCounter testing", () => {
     // very obviouse to other programmers, so you may need to add a comment in your test.
     userEvent.click(screen.getAllByRole('button')[0]);
     expect(screen.getByText('Click Count: 4')).toBeInTheDocument();
-    
+
     // But we can't skip the counter to 25 and test.  We can only do that by clicking the button
-    // in a loop.
+    // in a loop.  I want the count to be at 25, so I show the math to other programmers.
     for(let i = 0; i < 25-4; i++) {
         userEvent.click(screen.getByText('Click Me!'));
     }
