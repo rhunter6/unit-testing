@@ -19,7 +19,8 @@ describe("ClickCounter testing", () => {
     expect(shallowWrapper.state().counter).toBe(4);
 
     
-    shallowWrapper.setState({counter: 25});
+    shallowWrapper.setState({counter: 24});
+    shallowWrapper.find("button").simulate('click');
     expect(shallowWrapper.state().counter).toBe(25);
     expect(shallowWrapper).toMatchSnapshot();
   })
